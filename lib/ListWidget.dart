@@ -61,7 +61,17 @@ class _ListWidgetState extends State<ListWidget> {
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.all(16.0),
-                    child: Text(position.toString(), style: TextStyle(fontSize: 22.0),),
+                    child:Row(
+                      children: <Widget>[
+                        Image.asset('assets/profile.png',
+                        width: 50,
+                        height: 50,
+                        ),
+                        SizedBox(width:10),
+                        Text('Full Name')
+
+                      ],
+                    )
                   ),
                 ],
               ),
