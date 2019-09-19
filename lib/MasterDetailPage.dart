@@ -15,7 +15,6 @@ class _MasterDetailPageState extends State<MasterDetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: OrientationBuilder(builder: (context, orientation) {
 
         if (MediaQuery.of(context).size.width > 600) {

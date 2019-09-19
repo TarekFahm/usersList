@@ -18,13 +18,42 @@ class ListWidget extends StatefulWidget {
 class _ListWidgetState extends State<ListWidget> {
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
+    return Scaffold(
+      floatingActionButton: 
+      FloatingActionButton(
+        child: Icon(Icons.add,
+        color: Colors.black,
+        ),
+        
+        backgroundColor: Colors.white,
+        onPressed: (){},
+      ),
+      
+       appBar: AppBar(
+         title:Text('Users',
+         style: TextStyle(
+             color: Colors.black),
+         ),
+         actions: <Widget>[
+           IconTheme(
+             data: IconThemeData(color: Colors.black),
+             child: IconButton(
+               icon: Icon(Icons.more_vert,),
+               onPressed: (){},
+             )
+           )
+    ],
+       backgroundColor: Colors.transparent,
+       elevation: 0.0,
+       ),
+    body:
+    ListView.builder(
       itemCount: widget.count,
       itemBuilder: (context, position) {
-        return Padding(
+        return 
+          Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Card(
-            child: InkWell(
+          child: InkWell(
               onTap: () {
                 widget.onItemSelected(position);
               },
@@ -37,9 +66,10 @@ class _ListWidgetState extends State<ListWidget> {
                 ],
               ),
             ),
-          ),
-        );
-      },
+          
+          );
+        },),
     );
   }
+
 }
